@@ -62,7 +62,7 @@ function App() {
   const [password, setPassword] = useState("");
   const logIn=(e)=>{
     e.preventDefault();
-    fetch("http://localhost:3002/sign-in", {
+    fetch("https://backend-hotel-gwse.onrender.com/sign-in", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +106,7 @@ function App() {
   useEffect(() => {
 
     if (!user.loggedIn) return;
-    fetch("http://localhost:3002/api/rooms", {
+    fetch("https://backend-hotel-gwse.onrender.com/api/rooms", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ function App() {
 
  
   const deleteRoom = (id) => {
-    fetch(`http://localhost:3002/api/rooms/${id}`, {
+    fetch(`https://backend-hotel-gwse.onrender.com/api/rooms/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -180,7 +180,7 @@ function App() {
           <h2>Add Room</h2>
           <form style={styles.form} onSubmit={(e) => {
             e.preventDefault();
-            fetch("http://localhost:3002/api/rooms", {
+            fetch("https://backend-hotel-gwse.onrender.com/api/rooms", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
